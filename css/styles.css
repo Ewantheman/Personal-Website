@@ -24,3 +24,28 @@ h1 {
 h3{
     color: firebrick;
 }
+
+.Animation {
+    width: 200px;
+    height: 200px;
+    background: repeating-linear-gradient(red, rgb(255, 230, 0) 50px);
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    animation: 4s poly infinite alternate ease-in-out;
+    margin: 50px auto;
+}
+
+@keyframes poly {
+    from {
+      clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    }
+  
+    to {
+      clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+    }
+  }
+
+
+  /* adjust 1st column space for table */
+    #TableTotal td:first-child {
+    padding-right: 150px; /*Or how much space you need*/
+    }
